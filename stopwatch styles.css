@@ -1,0 +1,56 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.stopwatch {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    border: 8px solid;
+    border-width: 8px;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(50deg, darkblue, navy, rgb(126, 24, 120));
+    animation: borderAnimation 2s linear infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-image-source: linear-gradient(45deg, darkblue, navy, rgb(126, 24, 120));
+    }
+    100% {
+        border-image-source: linear-gradient(405deg, darkblue, navy, rgb(126, 24, 120));
+    }
+}
+
+#display {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    font-size: 16px;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#laps {
+    list-style: none;
+    padding: 0;
+}
+
+#laps li {
+    margin: 5px 0;
+    padding: 5px;
+    background: #eee;
+    border-radius: 5px;
+}
